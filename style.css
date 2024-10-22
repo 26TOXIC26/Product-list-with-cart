@@ -1,22 +1,148 @@
 body
 {
-	background-color: #f0f0f0;
+	background-color: #fcf9f7;
 	font-family: Arial, sans-serif;
 	margin: 0;
-	padding: 0;
+	padding: 50px 0px;
 }
 
 
 #main
 {
-	background-color: #fff;
 	margin: 0 auto;
 	padding: 20px;
 	width: 1500px;
 	display: flex;
-	/* flex-wrap: wrap; */
 	justify-content: space-around;
-	/* align-items: center; */
+}
+
+#list
+{
+	width: 1000px;
+	padding-left: 50px;
+	padding-top: 0;
+	/* border: #000000 1px solid; */
+}
+
+#products
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+#product
+{
+	width: 268px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#click
+{
+	width: 100%;
+	height: 310px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#pro-img
+{
+	/* border: 2.5px solid hsl(14, 86%, 42%); */
+	width: 268px;
+	height: 260px;
+	border-radius: 7px;
+}
+
+#click button
+{
+	position: absolute;
+	transform: translateY(130px);
+	width: 150px;
+	height: 40px;
+	background-color: #f4edeb;
+	border: 2px solid hsl(14, 86%, 42%);
+	border-radius: 99rem;
+	color: rgb(7, 7, 7);
+	text-align: center;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* font-size: 13px; */
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#click button:hover
+{
+	color: hsl(14, 86%, 42%);
+}
+
+#click button:active
+{
+	color: hsl(14, 86%, 42%);
+	transform: translateY(131px);
+}
+
+#main__box-container-btn-cart
+{
+	display: flex;
+	justify-content: center;
+	margin-right: 5px;
+}
+
+#info
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#pro-type
+{
+	margin: 10px 0 10px 0;
+	font-weight: 100;
+    color: hsl(7, 20%, 60%);
 }
 
 
+#pro-name
+{
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0 0 10px 0;
+}
+
+#pro-price
+{
+	margin: 0 0 0 0;
+	color: hsl(14, 86%, 42%);
+	font-weight: 550;
+}
+
+p
+{
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+#cart
+{
+	background-color: #f4edeb;
+	width: 300px;
+	height: 300px;
+	padding-left: 50px;
+	/* border:  1px solid hsl(14, 86%, 42%); */
+	border-radius: 10px;
+}
