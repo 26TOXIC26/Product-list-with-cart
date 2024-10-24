@@ -18,7 +18,8 @@ body
 
 #list
 {
-	border: 2px solid hsl(14, 86%, 42%);
+	/* border: 2px solid hsl(14, 86%, 42%); */
+	background-color: #f4edeb;
 	border-radius: 10px;
 	width: 1000px;
 	padding-left: 50px;
@@ -29,7 +30,7 @@ body
 
 #list h1
 {
-	/* color: hsl(14, 86%, 42%); */
+	color: hsl(14, 86%, 42%);
 	padding-left: 16px;
 	font-size: 40px;
 	/* padding-bottom: -80px; */
@@ -71,10 +72,17 @@ body
 	border-radius: 7px;
 }
 
-#click button
+#btn-before
 {
 	position: absolute;
 	transform: translateY(130px);
+	width: 150px;
+	height: 40px;
+}
+
+#btn-before button
+{
+
 	width: 150px;
 	height: 40px;
 	background-color: #f4edeb;
@@ -91,20 +99,49 @@ body
 	cursor: pointer;
 }
 
-#click button:hover
+#btn-before button:hover
 {
 	color: hsl(14, 86%, 42%);
 }
 
-#click button:active
+#btn-before button:active
 {
 	color: hsl(14, 86%, 42%);
-	transform: translateY(131px);
+	transform: translateY(1px);
 }
 
-#btn-1-after
+#btn-after
 {
+	position: absolute;
+	transform: translateY(130px);
+	width: 150px;
+	height: 40px;
+	background-color: hsl(14, 86%, 42%);
+	border: 2px solid hsl(14, 86%, 42%);
+	border-radius: 99rem;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-decoration: none;
 	display: none;
+	justify-content: space-around;
+	align-items: center;
+	/* font-size: 13px; */
+}
+
+#btn-after button
+{
+	width: 20px;
+	height: 20px;
+	color: black;
+	background-color: hsl(14, 86%, 42%);
+	border: 1px solid white;
+	border-radius: 99rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 #main__box-container-btn-cart
@@ -159,8 +196,13 @@ p
 {
 	/* margin-top: 80px; */
 	background-color: #f4edeb;
-	width: 400px;
-	height: 300px;
+	width: 450px;
+	margin-left: 30px;
+	/* height: 300px; */
+	/* height: auto; */
+	transition: height 0.3s ease;
+	box-sizing: border-box;
+
 	/* padding-left: 50px; */
 	/* border:  1px solid hsl(14, 86%, 42%); */
 	border-radius: 10px;
@@ -173,21 +215,39 @@ p
 	margin-top: 21.4px;
 	display: flex;
 	align-items: center;
+
+	/* justify-content: left; */
 }
 
-#cart-title h2
+#c-title
 {
 	/* width: 100%;
 	border: 1px solid hsl(14, 86%, 42%); */
 	padding: 0 0 0 20px;
 	color: hsl(14, 86%, 42%);
-	font-weight: bold;
+	font-weight: 600;
+}
+
+#cart-title h1
+{
+	/* width: 100%;
+	border: 1px solid hsl(14, 86%, 42%); */
+	padding: 0 5px 0 5px;
+	color: hsl(14, 86%, 42%);
+	font-size: 30px;
+	font-weight: 600;
+}
+
+#complet-title
+{
+	color: hsl(14, 86%, 42%);
+	font-weight: 600;
 }
 
 #cart-content
 {
 	width: 100%;
-	height: 80%;
+	height: 260px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -202,7 +262,25 @@ p
 
 #cart-content p
 {
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 12px;
 	color: hsl(7, 20%, 60%);
+}
+
+#product-cart
+{
+	border: 1px solid hsl(14, 86%, 42%);
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#product-cart-info
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 70%;
 }
