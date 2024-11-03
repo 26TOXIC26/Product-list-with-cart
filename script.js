@@ -142,24 +142,29 @@ removeButtons.forEach((button, index) => {
 });
 
 
-function confirm()
-{
+function confirm() {
     const confirmation = document.querySelector("#confirmation");
     const listBox = document.querySelector("#list-box");
-    const listBoxHeight = listBox.clientHeight;
     const main = document.querySelector("#main");
     const listProducts = document.querySelectorAll("#list-product");
+    const confirmationHeight = 400;
+    const listBoxHeight = 170;
+    const productcartHeight = 70 * (productIndex.length - 1);
+    const totalPrice = document.querySelector("#confirm-price");
+    const confirmQuantity = document.querySelectorAll("#list-quantity");
+
     main.style.filter = "blur(5px)";
     confirmation.style.display = "flex";
-    const listProductlength = document.querySelector("#list-product").clientHeight;
+    confirmation.style.height = `${confirmationHeight + productcartHeight}px`;
+    listBox.style.height = `${listBoxHeight + productcartHeight}px`;
 
-    alert(listProductlength);
-    listBox.style.height = `${listBoxHeight + (listProducts[0].clientHeight * productIndex.length)}px`;
-    confirmation.style.height = `${listBox.clientHeight + confirmation.clientHeight}px`;
-    while (productIndex.length > 0)
-    {
+    if (confirmation.clientHeight > 870)
+        confirmation.style.top = "60%";
+
+    while (productIndex.length > 0) {
+        confirmQuantity[productIndex[productIndex.length - 1]].innerText = itemsquantity[productIndex[productIndex.length - 1]].innerText;
         listProducts[productIndex.pop()].style.display = "flex";
     }
-
+    totalPrice.innerText = cartTotal.innerText;
 }
 
